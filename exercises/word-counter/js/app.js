@@ -4,13 +4,9 @@
 // 🤖: Create an Event Listener on textarea input
 // 🤖: The event handler should update the stats section with the number of words and characters in the textarea input.
 // 🤖: You will need to utilize the split method to get the words count.
-Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test
-  return false
-})
 
-  const textarea = document.getElementById("text");
+
+const textarea = document.getElementById("text");
   const statsSection = document.getElementById("stat");
   const form = document.querySelector("form");
 
