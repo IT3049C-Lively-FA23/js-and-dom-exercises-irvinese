@@ -32,3 +32,28 @@ form.addEventListener("submit", function(e){
     wordCountSection.innerText = `Words: ${words.length}`;
   charCountSection.innerText = `Characters: ${charCount}`;
   }
+
+/*
+  class WordCounter{
+    constructor(textareaId, wordCountId, charCountId){
+    this.textarea = document.getElementById(textareaId);
+    this.wordCountSection = document.getElementById(wordCountId);
+    this.charCountSection = document.getElementById(charCountId);
+
+    this.updateStats = this.updateStats.bind(this);
+
+    this.textarea.addEventListener("input", this.updateStats);
+    }
+
+    updateStats(){
+      const text = this.textarea.value;
+      const words = text.trim().split(/\s+/);
+      const charCount = text.length;
+
+      this.wordCountSection.innerText.value = `Words: ${words.length}`;
+      this.charCountSection.innertext = `Characters: ${charCount}`;
+    }
+  }
+
+  const wordCounter = new WordCounter("text", "wordCount", "charCount");
+  */

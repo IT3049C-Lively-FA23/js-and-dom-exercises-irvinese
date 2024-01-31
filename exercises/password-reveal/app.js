@@ -21,7 +21,7 @@ form.addEventListener(`submit`,function(e){
 	e.preventDefault();
 });
 
-
+/*
 class passwordReveal{
 	togglePasswordVisibility(password){
 		const type = password.getAttribute(`type`) === `password` ? `text` : `password`;
@@ -32,3 +32,4 @@ class passwordReveal{
 		passwordRevealer.togglePasswordVisibility(passwordInput);
 	};
 }
+*/
