@@ -6,6 +6,7 @@
 
 
 // Provided for you - prevent form submit
+
 const form = document.querySelector("form");
 form.addEventListener(`submit`,function(e){
 	const password = document.getElementById(`password`);
@@ -19,3 +20,15 @@ form.addEventListener(`submit`,function(e){
 	}
 	e.preventDefault();
 });
+
+
+class passwordReveal{
+	togglePasswordVisibility(password){
+		const type = password.getAttribute(`type`) === `password` ? `text` : `password`;
+		password.setAttribute(`type`, type)
+
+		const passwordRevealer = new passwordReveal();
+		const passwordInput = document.getElementById(`password`)
+		passwordRevealer.togglePasswordVisibility(passwordInput);
+	};
+}

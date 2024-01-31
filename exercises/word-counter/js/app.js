@@ -9,7 +9,6 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   // failing the test
   return false
 })
-
 const textarea = document.getElementById("text");
 const wordCountSection = document.getElementById("wordCount");
 const charCountSection = document.getElementById("charCount");
@@ -33,4 +32,3 @@ form.addEventListener("submit", function(e){
     wordCountSection.innerText = `Words: ${words.length}`;
   charCountSection.innerText = `Characters: ${charCount}`;
   }
- 
