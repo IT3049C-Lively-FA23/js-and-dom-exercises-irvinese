@@ -8,28 +8,17 @@
 // Provided for you - prevent form submit
 
 const form = document.querySelector("form");
-form.addEventListener(`submit`,function(e){
-	const password = document.getElementById(`password`);
-	const reveal = document.getElementById(`togglePassword`);
+const password = document.getElementById(`password`);
+const reveal = document.getElementById(`togglePassword`);
 
-	reveal.addEventListener(`click`, togglePasswordVisibility);
+function togglePasswordVisibility() {
+    const type = password.getAttribute(`type`) === `password` ? `text` : `password`;
+    password.setAttribute(`type`, type);
+}
 
-	function togglePasswordVisibility() {
-		const type = password.getAttribute(`type`) === `password` ? `text` : `password`;
-		password.setAttribute(`type`, type)
-	}
-	e.preventDefault();
+reveal.addEventListener(`click`, togglePasswordVisibility);
+
+form.addEventListener(`submit`, function (e) {
+    e.preventDefault();
 });
 
-/*
-class passwordReveal{
-	togglePasswordVisibility(password){
-		const type = password.getAttribute(`type`) === `password` ? `text` : `password`;
-		password.setAttribute(`type`, type)
-
-		const passwordRevealer = new passwordReveal();
-		const passwordInput = document.getElementById(`password`)
-		passwordRevealer.togglePasswordVisibility(passwordInput);
-	};
-}
-*/
